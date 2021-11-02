@@ -1,0 +1,18 @@
+{
+  "name": "@dylan/engines",
+  "version": "0.1.0",
+  "description": "Template engine mapper for Dylan.",
+  "license": "MIT",
+  "keywords": [
+    "dylan",
+    "templating",
+    "engine",
+    "mapper"
+  ],
+  "repository": "shanebo/engines",
+  "author": "Shane Thacker <shane@steadymade.com>",
+  "main": "./index",
+  "dependencies": {
+    "callsites": "~3.0.0"
+  }
+}

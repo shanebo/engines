@@ -1,6 +1,6 @@
 {
   "name": "@dylan/engines",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Template engine mapper for Dylan.",
   "license": "MIT",
   "keywords": [

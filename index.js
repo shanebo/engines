@@ -2,16 +2,12 @@ const callsites = require('callsites');
 const { dirname, resolve } = require('path');
 
 module.exports = ({ name, opts } = {}) => {
-  const engine = require(name);
-  const engineInstance = engine(opts);
-  let render;
-
-  if (name === 'beard') {
-    render = engineInstance.render.bind(engineInstance);
-  }
+  const package = require(name);
+  const engine = name === '@dylan/balm' ? package.balm(opts) : package(opts);
+  const render = engine.render.bind(engine);
 
   return {
-    instance: engineInstance,
+    instance: engine,
     render: (template, data) => {
       const from = callsites()[2].getFileName();
       const fromDir = dirname(from);
